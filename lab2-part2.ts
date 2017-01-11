@@ -2,12 +2,11 @@ class SavingsAccount {
 	
 	private initialBalance:number;
 	private ownerName:string;
-	private limit:number;
+	private limit:number = 0;
 
-	constructor(private initialBalance:number, private ownerName:string, private limit:number) {
+	constructor(initialBalance:number, ownerName:string) {
 		this.initialBalance = initialBalance;
 		this.ownerName = ownerName;
-		this.limit = limit;
 
 	}
 
@@ -17,7 +16,7 @@ class SavingsAccount {
 
 	withdraw(deduct:number) {
 		this.limit++;
-		if (limit > 3) {
+		if (this.limit > 3) {
 			console.log("error: cannot exceed 3 withdrawals");
 		} else {
 			this.initialBalance = initialBalance - deduct;
@@ -26,6 +25,6 @@ class SavingsAccount {
 	}
 
 	checkBalance() {
-		console.log(${this.initialBalance} + ${this.ownerName})
+		console.log(`${this.ownerName} account balance: ${this.balance}`);
 	}
 }

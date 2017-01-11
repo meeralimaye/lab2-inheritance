@@ -1,22 +1,22 @@
 class CheckingsAccount {
-	
-	private initialBalance:number;
-	private ownerName:string;
 
-	constructor(private initialBalance:number, private ownerName:string) {
-		this.initialBalance = initialBalance;
-		this.ownerName = ownerName;
+	private balance:number;
+	private owner:string;
+
+	constructor(initialBalance:number, private owner:string) {
+		this.balance = initialBalance;
+		this.owner = ownerName;
 	}
 
-	deposit(input:number) {
-		this.initialBalance += input;
+	deposit(amount:number) {
+		this.balance += input;
 	}
 
-	withdraw(deduct:number) {
-		this.initialBalance = initialBalance - deduct;
+	withdraw(amount:number) {
+		this.balance = this.balance - amount;
 	}
 
 	checkBalance() {
-		console.log(${this.initialBalance} + ${this.ownerName})
+		console.log(`${this.owner} nalance: $${this.balance}`)
 	}
 }
