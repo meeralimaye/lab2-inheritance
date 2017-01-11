@@ -1,11 +1,11 @@
-class checkingAccount {
+class CheckingsAccount {
 	
 	private initialBalance:number;
 	private ownerName:string;
 
 	constructor(private initialBalance:number, private ownerName:string) {
 		this.initialBalance = initialBalance;
-		this.ownerName = owner.name;
+		this.ownerName = ownerName;
 	}
 
 	deposit(input:number) {
